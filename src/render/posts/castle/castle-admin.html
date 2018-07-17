@@ -1,0 +1,77 @@
+---
+title: "Таинственный замок (админка)"
+slug: 'castle-admin'
+layout: project
+isPublished: false
+date: '2001'
+scripts: ['/node_modules/knockout/build/output/knockout-latest.js', '/posts/castle/static/castle-admin.js']
+styles: ['/node_modules/font-awesome/css/font-awesome.css', '/posts/castle/static/castle-admin.css']
+---
+
+<div class="castle-admin">
+    <div class="castle-admin-sidebar">
+            <div class="castle-admin-sidebar__header">
+                Список комнат
+            </div>
+        <!-- ko foreach: rooms -->
+            <div class="castle-admin-sidebar__item" data-bind="attr: {'data-info': JSON.stringify($data)}, click: $parent.setCurrentRoom">
+                <span class="castle-admin-sidebar__simpleID" data-bind="text: simpleID + ':'"></span>
+                <span class="castle-admin-sidebar__title" data-bind="text: title + (roomsToGo.length ? ' (' + roomsToGo + ')' : '')"></span>
+                <span class="castle-admin-sidebar__delete fa fa-times" data-bind="click: $parent.deleteRoom"></span>
+            </div>
+        <!-- /ko -->
+        <div class="castle-admin-sidebar__item castle-admin-sidebar__item_new" data-bind="click: setEmptyRoom">
+            Добавить новую комнату
+        </div>
+    </div>
+    <div class="castle-admin-main">
+        <div class="castle-admin-main__title">Добавление/изменение</div>
+        <div class="castle-admin-form">
+            <form class="castle-admin-form__form j-form">
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Заголовок: </span>
+                    <input name="title" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Контент: </span>
+                    <textarea name="content"></textarea>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Простой ID: </span>
+                    <input name="simpleID" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Метки: </span>
+                    <input name="marks" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">X: </span>
+                    <input name="x" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Y: </span>
+                    <input name="y" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">Z: </span>
+                    <input name="z" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">rotateX: </span>
+                    <input name="rotateX" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">rotateY: </span>
+                    <input name="rotateY" type="text"></input>
+                </label>
+                <label class="castle-admin-form__label">
+                    <span class="castle-admin-form__text">rotateZ: </span>
+                    <input name="rotateZ" type="text"></input>
+                </label>
+                <input type="hidden" name="_id"></input>
+                <button class="castle-admin-form__submit" data-bind="visible: currentRoom() !== 0, click: updateRoom">Изменить</button>
+                <button class="castle-admin-form__submit" data-bind="visible: currentRoom() === 0, click: addRoom">Добавить</button>
+            </form>
+        </div>
+    </div>
+</div>

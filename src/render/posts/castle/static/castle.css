@@ -1,0 +1,125 @@
+.castle__wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.castle__wrapper:before {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    vertical-align: middle;
+    content: '';
+}
+
+.castle__centered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.castle__title {
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+
+.castle__win {
+    font-weight: bold;
+}
+
+/* Menu */
+.castle__menu {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 0;
+    display: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.castle__menu-restart {
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 10px;
+    background: rgba(216, 219, 238, .25);
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.castle__menu-moves {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 10px;
+    background: rgba(216, 219, 238, .25);
+    line-height: 50px;
+}
+
+.castle__menu-achievement {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 10px;
+    color: #eee;
+    background: rgba(35, 35, 43, .25);
+    line-height: 50px;
+}
+
+/* Slides */
+.impress {
+    display: none;
+}
+
+.slide {
+    display: block;
+    width: 900px;
+    height: 700px;
+    color: #ededed;
+    text-align: justify;
+}
+
+.slide a {
+    text-decoration: none;
+    color: #ededed;
+    font-weight: bold;
+}
+
+.slide.active,
+.slide.active a {
+    color: #4d4d4d;
+}
+
+.slide.active a:hover {
+    color: #000;
+}
+
+.slide:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+    margin-left: -10px;
+}
+
+.slide__wrapper {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.slide__content {
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'PT Serif', Georgia, serif;
+}
+
+.slide__title {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide__title::first-letter {
+    font-size: 50px;
+    text-shadow: 1px 1px 1px red;
+}

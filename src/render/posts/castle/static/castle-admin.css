@@ -1,0 +1,84 @@
+div.castle-admin {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.castle-admin-sidebar {
+    width: 300px;
+    float: left;
+}
+
+.castle-admin-sidebar__header,
+.castle-admin-main__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.castle-admin-sidebar__simpleID {
+    font-weight: bold;
+}
+
+.castle-admin-sidebar__item {
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.castle-admin-sidebar__item_current {
+    background: #f3f3f3;
+}
+
+.castle-admin-sidebar__item:hover {
+    background: #fafafa;
+}
+
+.castle-admin-sidebar__item_new {
+    font-style: italic;
+}
+
+.castle-admin-sidebar__delete {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    line-height: 15px;
+    font-size: 15px;
+    display: none;
+}
+
+.castle-admin-sidebar__item:hover .castle-admin-sidebar__delete {
+    display: block;
+}
+
+.castle-admin-main {
+    margin-left: 300px;
+    max-width: 600px;
+    padding-left: 10px;
+}
+
+.castle-admin-form__label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.castle-admin-form input {
+    width: 50%;
+    border: solid 1px #ccc;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.castle-admin-form textarea {
+    width: 100%;
+    min-height: 200px;
+    font-size: 14px;
+    border: solid 1px #ccc;
+}
+
+.castle-admin-form__text {
+    display: block;
+}

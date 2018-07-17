@@ -1,0 +1,34 @@
+---
+title: "Таинственный замок"
+slug: 'castle'
+layout: project
+isPublished: true
+date: '2014-10-28'
+scripts: ['/node_modules/knockout/build/output/knockout-latest.js', '/posts/castle/static/impress.js', '/scripts/common.js', '/posts/castle/static/castle.js']
+styles: ['/posts/castle/static/castle.css']
+---
+
+<div class="castle__wrapper">
+    <div class="castle__centered">
+        <div class="castle__title">Таинственный замок</div>
+        <button class="castle__start">Начать игру</button>
+    </div>
+</div>
+
+<div class="castle__menu">
+    <div class="castle__menu-restart" data-bind="click: restart">Начать заново</div>
+    <div class="castle__menu-achievement">Самый быстрый путь - 13 локаций</div>
+    <div class="castle__menu-moves" data-bind="text: 'Вами посещено локаций: ' + moves()"></div>
+</div>
+
+<div id="impress" class="impress">
+    <!-- ko foreach: rooms -->
+        <div data-bind="attr: {id: simpleID, 'data-marks': marks, 'data-x': x, 'data-y': y, 'data-z': z, 'data-rotate-x': rotateX, 'data-rotate-y': rotateY, 'data-rotate-z': rotateZ}" class="step slide">
+            <div class="slide__wrapper">
+                <div class="slide__title" data-bind="text: title"></div>
+                <div class="slide__content" data-bind="html: content">
+                </div>
+            </div>
+        </div>
+    <!-- /ko -->
+</div>

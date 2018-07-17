@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<header class="header">
+    <%- @partial('menu') %>
+</header>
+<%- @content %>

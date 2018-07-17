@@ -1,0 +1,84 @@
+.viewer-dropzone {
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+    margin: 15px 0 0 15px;
+    width: 120px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+}
+
+.viewer-dropzone:hover {
+    border-color: #ccc;
+}
+
+.viewer-upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.viewer-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 10px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+@-webkit-keyframes viewer-preloader {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.viewer-preloader {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    width: 32px;
+    height: 32px;
+    display: none;
+    overflow: hidden;
+    -webkit-animation-name: viewer-preloader;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: viewer-preloader;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.viewer-preloader__circle {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.viewer-preloader__circle:before {
+    content: '';
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 2px #999;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

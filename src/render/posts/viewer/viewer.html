@@ -1,0 +1,17 @@
+---
+title: "Просмотрщик моделей Three.js"
+slug: 'viewer'
+layout: project
+isPublished: true
+date: '11-18-2013'
+scripts: ['/scripts/common.js', '/node_modules/three/build/three.min.js', '/scripts/OrbitControls.min.js', '/posts/viewer/static/viewer.js']
+styles: ['/posts/viewer/static/viewer.css']
+---
+
+<div class="viewer-dropzone j-dropzone">
+    <span class="viewer-text">Загрузите файл или перетащите его в это поле</span>
+    <input type="file" class="viewer-upload j-upload"></input>
+</div>
+<span class="viewer-preloader">
+    <span class="viewer-preloader__circle"></span>
+</span>

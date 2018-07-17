@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <header class="header">
+        <%- @partial('menu') %>
+    </header>
+    <main class="main">
+        <div class="content">
+            <h1><%- @document.title %></h1>
+            <%- @content %>
+        </div>
+    </main>
+    <footer class="footer">
+        2013 — 2018
+    </footer>
+</div>

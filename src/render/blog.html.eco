@@ -1,0 +1,30 @@
+---
+title: "Блог"
+layout: "content"
+isPage: true
+order: 2
+---
+
+<% currentYear = 0 %>
+
+<div class="postList">
+    <% for post in @getCollection('lenta').toJSON(): %>
+        <% year = @getYear(post.date) %>
+        <% if currentYear != year: %>
+            <div class="postList__year"><%= year %></div>
+            <% currentYear = year %>
+        <% end %>
+        <div class="postList__item">
+            <a href="<%= post.url %>" class="postList__item-title"><%= post.title %></a>
+            <span class="postList__item-date">
+                (
+                <% if post.date: %>
+                    <%= @postCreatedAt(post.date) %>
+                <% else: %>
+                    <%= @postCreatedAt(post.ctime) %>
+                <% end %>
+                )
+            </span>
+        </div>
+    <% end %>
+</div>

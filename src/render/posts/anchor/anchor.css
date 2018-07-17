@@ -1,0 +1,63 @@
+main {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+figure img {
+    border: none;
+}
+
+figcaption {
+    font-size: 14px;
+}
+
+h1 {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+#anchor {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -450px;
+}
+
+.hint {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    display: none;
+    width: 100px;
+    margin-left: -250px;
+    text-align: right;
+}
+
+.hint__text {
+    padding: 2px 5px;
+    background: #ccc;
+    font-size: 20px;
+}
+
+article,
+#disqus_thread {
+    box-sizing: border-box;
+    margin-left: 300px;
+    padding: 0 20px 20px;
+}
+
+#disqus_thread {
+    padding-bottom: 0;
+}
+
+.highlight {
+    cursor: pointer;
+    border-bottom: #000 dotted 1px;
+}
+
+.highlight:hover {
+    border-bottom: none;
+}

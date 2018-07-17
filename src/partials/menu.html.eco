@@ -1,0 +1,11 @@
+<nav class="menu">
+    <ul class="menu__list">
+        <% for page in @getCollection('pages').toJSON(): %>
+            <li class="<%= if page.id is @document.id then 'active' else 'inactive' %> menu__list-item">
+                <a href="<%= page.url %>" class="menu__list-item-link">
+                    <%= page.title %>
+                </a>
+            </li>
+        <% end %>
+    </ul>
+</nav>
