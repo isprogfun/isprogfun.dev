@@ -2,3 +2,6 @@
 /out
 isprogfun.conf
 Makefile
+
+# Local Netlify folder
+.netlify

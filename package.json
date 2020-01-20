@@ -1,6 +1,7 @@
 {
   "scripts": {
     "dev": "docpad run",
+    "build": "docpad generate",
     "setup": "make setup",
     "deploy": "make deploy"
   },
