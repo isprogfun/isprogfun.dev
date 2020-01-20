@@ -1,9 +1,7 @@
 {
   "scripts": {
     "dev": "docpad run",
-    "build": "docpad generate",
-    "setup": "make setup",
-    "deploy": "make deploy"
+    "build": "docpad generate"
   },
   "devDependencies": {
     "docpad": "~6.79.4",
