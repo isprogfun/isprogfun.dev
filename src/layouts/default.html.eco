@@ -14,6 +14,7 @@
 <body <% if @document.slug: %>class="<%= @document.slug %>" <% end %>>
     <%- @content %>
     <script src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
+    <script src='/scripts/date.js'></script>
     <% if @document.scripts: %>
         <%- @getBlock("scripts").add(@document.scripts).toHTML() %>
     <% end %>

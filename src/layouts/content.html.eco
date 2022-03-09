@@ -12,7 +12,7 @@ layout: default
             <%- @content %>
         </div>
     </main>
-    <footer class="footer">
-        2013 — 2021
+    <footer class="footer" id="js-footer">
+        2013
     </footer>
 </div>
