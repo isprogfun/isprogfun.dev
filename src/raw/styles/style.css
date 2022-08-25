@@ -5,7 +5,7 @@ html
 
 body
 {
-    font: 18px -apple-system, Arial, sans-serif;
+    font: 16px sans-serif;
 
     height: 100%;
     margin: 0;
@@ -61,7 +61,7 @@ a:hover
 
 article
 {
-    font-family: 'PT Serif', 'Georgia', serif;
+    font-family: serif;
     line-height: 28px;
 }
 

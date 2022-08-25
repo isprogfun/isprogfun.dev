@@ -25,7 +25,7 @@
             var self = this;
 
             $.ajax({
-                url: '//isprogfun.ru:4730/rooms/update',
+                url: '//isprogfun.dev:4730/rooms/update',
                 data: $form.serialize(),
                 method: 'POST',
                 success: function(data) {
@@ -48,7 +48,7 @@
         },
         addRoom: function() {
             $.ajax({
-                url: '//isprogfun.ru:4730/rooms/add',
+                url: '//isprogfun.dev:4730/rooms/add',
                 data: $form.serialize(),
                 method: 'POST',
                 success: function(data) {
@@ -66,7 +66,7 @@
         },
         deleteRoom: function(room) {
             $.ajax({
-                url: '//isprogfun.ru:4730/rooms/delete',
+                url: '//isprogfun.dev:4730/rooms/delete',
                 data: {id: room._id},
                 method: 'POST',
                 success: function(data) {
@@ -86,7 +86,7 @@
 
     // Get all rooms on start
     $.ajax({
-        url: '//isprogfun.ru:4730/rooms/get',
+        url: '//isprogfun.dev:4730/rooms/get',
         method: 'GET',
         success: function(data) {
             if (data.status === 'success') {

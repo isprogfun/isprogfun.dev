@@ -4,8 +4,6 @@
 // Libs
 const moment = require('moment');
 
-moment.locale('ru');
-
 // Define the DocPad Configuration
 module.exports = {
     regenerateDelay: 0,

@@ -21,7 +21,7 @@
 
     $startButton.on('click', function() {
         $.ajax({
-            url: '//isprogfun.ru/posts/castle/static/rooms.json',
+            url: '//isprogfun.dev/posts/castle/static/rooms.json',
             method: 'GET',
             success: function(data) {
                 castleViewModel.rooms(data.rooms);

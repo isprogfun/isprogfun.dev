@@ -1,5 +1,5 @@
 ---
-title: "Контакты"
+title: "Contacts"
 layout: "content"
 isPage: true
 order: 3

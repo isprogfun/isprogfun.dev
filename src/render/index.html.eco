@@ -1,5 +1,5 @@
 ---
-title: "Блог"
+title: "Blog"
 layout: "content"
 isPage: true
 order: 2
@@ -11,7 +11,7 @@ order: 2
     <% for post in @getCollection('lenta').toJSON(): %>
         <% year = @getYear(post.date) %>
         <% if currentYear != year: %>
-            <div class="postList__year"><%= year %></div>
+            <h3 class="postList__year"><%= year %></h3>
             <% currentYear = year %>
         <% end %>
         <div class="postList__item">
