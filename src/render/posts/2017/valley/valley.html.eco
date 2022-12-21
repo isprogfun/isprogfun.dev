@@ -3,5 +3,5 @@ title: "Monument Valley"
 layout: "project"
 isPublished: true
 date: '12-18-2017'
-scripts: ['/node_modules/three/build/three.min.js', '/scripts/OrbitControls.min.js', '/scripts/common.js', '/posts/valley/scripts/valley.js']
+scripts: ['/node_modules/three/build/three.min.js', '/scripts/OrbitControls.min.js', '/scripts/common.js', './scripts/valley.js']
 ---

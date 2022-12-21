@@ -44,7 +44,7 @@
 
         // Load geometry
         loader = new THREE.JSONLoader();
-        loader.load('/posts/valley/scripts/triangle.json', function (geometry) {
+        loader.load('./scripts/triangle.json', function (geometry) {
             var colors = [0x52cb0b, 0x204fcb, 0x841acb, 0xcb3525, 0x3ecbbf, 0xcb7b2b];
 
             mesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({

@@ -113,7 +113,7 @@
 
             deferreds.push(deferred);
 
-            new THREE.JSONLoader().load('model/' + part.fileName + '.json', function(geometry, materials) {
+            new THREE.JSONLoader().load('./static/model/' + part.fileName + '.json', function(geometry, materials) {
                 var mesh;
 
                 materials = materials.map(function(material) {

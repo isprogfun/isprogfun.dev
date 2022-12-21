@@ -42,7 +42,7 @@
         var pMaterial = new THREE.ParticleBasicMaterial({
             color: 0xFFFFFF,
             size: 20,
-            map: THREE.ImageUtils.loadTexture('particle.png'),
+            map: THREE.ImageUtils.loadTexture('./static/particle.png'),
             blending: THREE.AdditiveBlending,
             transparent: true
         });
